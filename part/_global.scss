@@ -1,0 +1,16 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font:{
+        family:$font;
+        style:normal;
+        weight:400;
+        size:24px;
+    }
+    line-height: 1.5em;
+    color:$color-fuxsia;
+    letter-spacing: 10%;
+}

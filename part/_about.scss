@@ -1,0 +1,44 @@
+.about{
+    @extend %for_div_universal;
+    @include for_div_color($color-fuxsia, $color-white);
+    
+    .container{
+        @include grid_area(5% 1fr 1fr 5%, auto);
+        grid-gap: 10%;
+
+        .about__content{
+            h2{
+                color: $color_purple;
+                font-size: 36px;
+                font-weight: 400;
+                text-transform: uppercase;
+                padding-bottom: 25px;
+            }
+            p{
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
+        .one{
+            @include grid_st_ed(2,3);
+        }
+
+        .two{
+            @include grid_st_ed(3,4);
+        }
+
+        @include mobile{
+            @include grid_area(10% 1fr 10%, auto);
+            text-align: center;
+
+            .one{
+                @include grid_st_ed(2,3);
+            }
+    
+            .two{
+                @include grid_st_ed(2,3);
+            }
+        }
+    
+    }
+}

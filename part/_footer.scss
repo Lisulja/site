@@ -1,0 +1,48 @@
+.footer{
+    @extend %for_div_universal;
+    @include for_div_color($color-white, $color-fuxsia);
+    min-height: 213px!important;
+
+    .container{
+        @include grid_area(10% 1fr 1fr 10%, auto);
+
+        .copyright{
+            @include grid_st_ed(2,3);
+        }
+        .back_top{
+            @include grid_st_ed(3,4);
+            margin: 0 auto;
+            a{
+                color:$color-white;
+                padding: 5px 15px;
+                text:{
+                    decoration: none;
+                    transform: uppercase;
+                }
+                border: 1px solid $color-white;
+                border-radius: 5px; 
+                
+                transition: 1.5s padding;
+                &:hover{
+                    padding: 10px 20px;
+                } 
+            }
+        }
+        @include table{
+            @include grid_area(10% 1fr  10%, auto);
+
+            .copyright{
+                @include grid_st_ed(2,3);
+                text-align: center;
+                padding-bottom: $insert/3;
+            }
+            .back_top{
+                @include grid_st_ed(2,3);
+            }
+           
+        }
+        
+    }
+
+
+}

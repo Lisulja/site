@@ -1,0 +1,37 @@
+@mixin for_div_color($text_color,$bg_color){
+    background-color: $bg_color;
+    color:$text_color;
+}
+@mixin for_div_img($text_color,$bg_img){
+    background:{
+        image:url($bg_img);
+        repeat:no-repeat;
+        position: center top;
+        size:cover;
+    } 
+    color:$text_color;
+}
+%for_div_universal {
+    padding: $insert 0;
+    min-height: 512px; 
+}
+@mixin grid_area($colm, $rows) {
+    display:grid;
+    grid-template-columns: $colm; 
+    grid-auto-rows: $rows ;    
+    margin: 0 auto; 
+}
+@mixin grid_st_ed($start, $end){
+    grid-column-start:$start;
+    grid-column-end:$end;
+}
+@mixin table{
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+@mixin mobile{
+    @media screen and (max-width:520px){
+        @content;
+    }
+}
